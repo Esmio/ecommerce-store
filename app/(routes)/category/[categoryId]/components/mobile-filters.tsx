@@ -3,7 +3,7 @@
 import { useState } from 'react';
 
 import { Color, Size } from '@/types';
-import Button from '@/components/button';
+import Button from '@/components/ui/button';
 import { Plus, X } from 'lucide-react';
 import { Dialog } from '@headlessui/react';
 import IconButton from '@/components/ui/icon-button';
@@ -35,7 +35,7 @@ const MobileFilters: React.FC<MobileFiltersProps> = ({ sizes, colors }) => {
         <div className="fixed inset-0 bg-black bg-opacity-25" />
         {/* Dialog position */}
         <div className="fixed inset-0 z-40 flex">
-          <Dialog.Panel className="relative ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-white py-4 pb-6 shadow-xl">
+          <Dialog.Panel className="relative flex flex-col w-full h-full max-w-xs py-4 pb-6 ml-auto overflow-y-auto bg-white shadow-xl">
             {/* Close Button */}
             <div className="flex items-center justify-end px-4">
               <IconButton onClick={onClose} icon={<X size={15} />} />
